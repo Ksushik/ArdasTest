@@ -12,8 +12,8 @@ package com.stoxa.testforardas;
 public class MainClass {
     public static void main(String[] args) {
         Greeting myGreeting = new Greeting();
-        GreetingType keyMessage = new GreetingType();
-        String key = keyMessage.determineKeyMessage();
+        DayPartSelector keyMessage = new DayPartSelector();
+        String key = keyMessage.getKeyMessage();
         System.out.println(myGreeting.localizeMessage(key));
 
     }

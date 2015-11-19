@@ -13,19 +13,19 @@ import org.slf4j.LoggerFactory;
  *
  * @author ksu
  */
-public class GreetingType {
+public class DayPartSelector {
     
-final Logger logger = LoggerFactory.getLogger(GreetingType.class);
+final Logger logger = LoggerFactory.getLogger(DayPartSelector.class);
 
 Calendar c;
 int currentHourOfDay;
-GreetingType(){
+DayPartSelector(){
  c = new GregorianCalendar();   
 }
 
 
 
-public String determineKeyMessage () {
+public String getKeyMessage () {
     currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 
     logger.info("The current Hour Of Day is: " + currentHourOfDay);
     if (currentHourOfDay>6&&currentHourOfDay<=9) {

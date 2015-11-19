@@ -20,10 +20,10 @@ import org.slf4j.LoggerFactory;
  *
  * @author stoxa
  */
-public class GreetingTypeTest extends GreetingType {
+public class DayPartSelectorTest extends DayPartSelector {
    
     
-    public GreetingTypeTest(Calendar calendarForTest) {
+    public DayPartSelectorTest(Calendar calendarForTest) {
     c = calendarForTest;   
     }
     
@@ -49,15 +49,15 @@ public class GreetingTypeTest extends GreetingType {
     }
 
     /**
-     * Test of determineKeyMessage method, of class GreetingType.
+     * Test of getKeyMessage method, of class DayPartSelector.
      */
     @Test
-    public void test1DetermineKeyMessage() {
+    public void test1GetKeyMessage() {
         System.out.println("Test1: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 8, 15);
-        GreetingTypeTest instance = new GreetingTypeTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest(c);
         String expResult = "MorningMessage";
-        String result = instance.determineKeyMessage();
+        String result = instance.getKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test1 passed correctly (morning)");
         } else {
@@ -66,12 +66,12 @@ public class GreetingTypeTest extends GreetingType {
     }
     
     @Test
-    public void test2DetermineKeyMessage() {
+    public void test2GetKeyMessage() {
         System.out.println("Test2: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 12, 15);
-        GreetingTypeTest instance = new GreetingTypeTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest(c);
         String expResult = "DayMessage";
-        String result = instance.determineKeyMessage();
+        String result = instance.getKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test2 passed correctly (day)");
         } else {
@@ -80,12 +80,12 @@ public class GreetingTypeTest extends GreetingType {
     }
     
     @Test
-    public void test3DetermineKeyMessage() {
+    public void test3GetKeyMessage() {
         System.out.println("Test3: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 20, 15);
-        GreetingTypeTest instance = new GreetingTypeTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest(c);
         String expResult = "EveningMessage";
-        String result = instance.determineKeyMessage();
+        String result = instance.getKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test3 passed correctly (evening)");
         } else {
@@ -94,12 +94,12 @@ public class GreetingTypeTest extends GreetingType {
     }
     
     @Test
-    public void test4DetermineKeyMessage() {
+    public void test4GetKeyMessage() {
         System.out.println("Test4: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 0, 15);
-        GreetingTypeTest instance = new GreetingTypeTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest(c);
         String expResult = "NightMessage";
-        String result = instance.determineKeyMessage();
+        String result = instance.getKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test4 passed correctly (night)");
         } else {
