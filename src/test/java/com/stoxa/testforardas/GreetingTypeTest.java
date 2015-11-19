@@ -53,10 +53,13 @@ public class GreetingTypeTest {
         GreetingType instance = new GreetingType(c);
         String expResult = "MorningMessage";
         String result = instance.determineKeyMessage();
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test1 passed correctly (morning)");
+        } else {
         fail("The test1 was failed (morning)");
+        }
     }
+    
     @Test
     public void test2DetermineKeyMessage() {
         System.out.println("Test2: Let's test the method determineKeyMessage");
@@ -64,10 +67,13 @@ public class GreetingTypeTest {
         GreetingType instance = new GreetingType(c);
         String expResult = "DayMessage";
         String result = instance.determineKeyMessage();
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test2 passed correctly (day)");
+        } else {
         fail("The test2 was failed (day)");
+        }
     }
+    
     @Test
     public void test3DetermineKeyMessage() {
         System.out.println("Test3: Let's test the method determineKeyMessage");
@@ -75,10 +81,13 @@ public class GreetingTypeTest {
         GreetingType instance = new GreetingType(c);
         String expResult = "EveningMessage";
         String result = instance.determineKeyMessage();
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test3 passed correctly (evening)");
+        } else {
         fail("The test3 was failed (evening)");
+        }
     }
+    
     @Test
     public void test4DetermineKeyMessage() {
         System.out.println("Test4: Let's test the method determineKeyMessage");
@@ -86,9 +95,11 @@ public class GreetingTypeTest {
         GreetingType instance = new GreetingType(c);
         String expResult = "NightMessage";
         String result = instance.determineKeyMessage();
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test4 passed correctly (night)");
+        } else {
         fail("The test4 was failed (night)");
+        }
     }
     
 }

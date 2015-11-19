@@ -53,10 +53,13 @@ public class GreetingTest {
         Locale locale = new Locale("en", "US");
         String expResult = "Good morning, World!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test1 passed correctly");
+        } else {
         fail("The test1 was failed");
+        }
     }
+    
      @Test
     public void test2LocalizeMessage() {
         System.out.println("Test1: Let's test the method localizeMessage for Day");
@@ -65,10 +68,13 @@ public class GreetingTest {
         Locale locale = new Locale("en", "US");
         String expResult = "Good day, World!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test2 passed correctly");
+        } else {
         fail("The test2 was failed");
+        }
     }
+    
      @Test
     public void test3LocalizeMessage() {
         System.out.println("Test3: Let's test the method localizeMessage for Evening");
@@ -77,10 +83,13 @@ public class GreetingTest {
         Locale locale = new Locale("en", "US");
         String expResult = "Good evening, World!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test3 passed correctly");
+        } else {
         fail("The test3 was failed");
+        }
     }
+    
     @Test
     public void test4LocalizeMessage() {
         System.out.println("Test4: Let's test the method localizeMessage for Night");
@@ -89,46 +98,58 @@ public class GreetingTest {
         Locale locale = new Locale("en", "US");
         String expResult = "Good night, World!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test4 passed correctly");
+        } else {
         fail("The test4 was failed");
+        }
     }
+    
     @Test
     public void test5LocalizeMessage() {
-        System.out.println("Test5: Let's test the method localizeMessage for Night");
+        System.out.println("Test5: Let's test the method localizeMessage for Morning");
         String keyMessage = "MorningMessage";
         Greeting instance = new Greeting();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Доброе утро, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test5 passed correctly");
+        } else {
         fail("The test5 was failed");
+        }
     }
+    
     @Test
     public void test6LocalizeMessage() {
-        System.out.println("Test6: Let's test the method localizeMessage for Night");
+        System.out.println("Test6: Let's test the method localizeMessage for Day");
         String keyMessage = "DayMessage";
         Greeting instance = new Greeting();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Добрый день, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test6 passed correctly");
+        } else {
         fail("The test6 was failed");
+        }
     }
+    
     @Test
     public void test7LocalizeMessage() {
-        System.out.println("Test7: Let's test the method localizeMessage for Night");
+        System.out.println("Test7: Let's test the method localizeMessage for Evening");
         String keyMessage = "EveningMessage";
         Greeting instance = new Greeting();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Добрый вечер, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test7 passed correctly");
+        } else {
         fail("The test7 was failed");
+        }
     }
+    
     @Test
     public void test8LocalizeMessage() {
         System.out.println("Test8: Let's test the method localizeMessage for Night");
@@ -137,8 +158,10 @@ public class GreetingTest {
         Locale locale = new Locale("ru", "UA");
         String expResult = "Доброй ночи, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
-        assertEquals(expResult, result);
+        if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test8 passed correctly");
+        } else {
         fail("The test8 was failed");
+        }
     }
 }
