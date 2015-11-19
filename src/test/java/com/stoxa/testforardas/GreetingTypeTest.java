@@ -13,15 +13,20 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author stoxa
  */
-public class GreetingTypeTest {
+public class GreetingTypeTest extends GreetingType {
+   
     
-    public GreetingTypeTest() {
+    public GreetingTypeTest(Calendar calendarForTest) {
+    c = calendarForTest;   
     }
+    
     
     @BeforeClass
     public static void setUpClass() {
@@ -49,8 +54,8 @@ public class GreetingTypeTest {
     @Test
     public void test1DetermineKeyMessage() {
         System.out.println("Test1: Let's test the method determineKeyMessage");
-        Calendar c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 8, 15);
-        GreetingType instance = new GreetingType(c);
+        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 8, 15);
+        GreetingTypeTest instance = new GreetingTypeTest(c);
         String expResult = "MorningMessage";
         String result = instance.determineKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
@@ -63,8 +68,8 @@ public class GreetingTypeTest {
     @Test
     public void test2DetermineKeyMessage() {
         System.out.println("Test2: Let's test the method determineKeyMessage");
-        Calendar c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 12, 15);
-        GreetingType instance = new GreetingType(c);
+        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 12, 15);
+        GreetingTypeTest instance = new GreetingTypeTest(c);
         String expResult = "DayMessage";
         String result = instance.determineKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
@@ -77,8 +82,8 @@ public class GreetingTypeTest {
     @Test
     public void test3DetermineKeyMessage() {
         System.out.println("Test3: Let's test the method determineKeyMessage");
-        Calendar c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 20, 15);
-        GreetingType instance = new GreetingType(c);
+        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 20, 15);
+        GreetingTypeTest instance = new GreetingTypeTest(c);
         String expResult = "EveningMessage";
         String result = instance.determineKeyMessage();
         if (expResult.equalsIgnoreCase(result)){
@@ -91,8 +96,8 @@ public class GreetingTypeTest {
     @Test
     public void test4DetermineKeyMessage() {
         System.out.println("Test4: Let's test the method determineKeyMessage");
-        Calendar c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 0, 15);
-        GreetingType instance = new GreetingType(c);
+        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 0, 15);
+        GreetingTypeTest instance = new GreetingTypeTest(c);
         String expResult = "NightMessage";
         String result = instance.determineKeyMessage();
         if (expResult.equalsIgnoreCase(result)){

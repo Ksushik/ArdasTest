@@ -23,10 +23,7 @@ GreetingType(){
  c = new GregorianCalendar();   
 }
 
-// test
-GreetingType( Calendar calendarForTest){
- c = calendarForTest;   
-}
+
 
 public String determineKeyMessage () {
     currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 

@@ -9,6 +9,9 @@ package com.stoxa.testforardas;
  *
  * @author ksu
  */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import  java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
@@ -24,8 +27,9 @@ final Logger logger = LoggerFactory.getLogger(Greeting.class);
 
     
  private static final int DEFAULT_LOCALE = 0;
- public static final Locale[] supportedLocales = {new Locale("en", "US"), new Locale("ru", "UA") }; 
- ResourceBundle bundle; 
+ private static final Locale[] supportedLocales = {new Locale("en", "US"), new Locale("ru", "UA") }; 
+ private static final List <Locale> localesList = new ArrayList<Locale> (Arrays.asList(supportedLocales));
+ private ResourceBundle bundle; 
  public static Locale locale; 
  String message;
  String baseName;
@@ -39,18 +43,18 @@ final Logger logger = LoggerFactory.getLogger(Greeting.class);
    } catch (MissingResourceException ex1) 
    {
        logger.error("No resource bundle for the specified base name can be found, "
-               + "perhaps you should specify the full path to the file: " + ex1.getStackTrace(), ex1);
+               + "perhaps you should specify the full path to the file: ", ex1);
    }catch (NullPointerException ex2) {
-       logger.error("baseName is null: " + ex2.getStackTrace(), ex2);
+       logger.error("baseName is null: ", ex2);
    }
 
    try {
    message = bundle.getString(keyMessage);
    } catch (MissingResourceException ex3) 
    {
-       logger.error("No object for the given key can be found, " + ex3.getStackTrace(), ex3);
+       logger.error("No object for the given key can be found, ", ex3);
     } catch (NullPointerException ex4) {
-       logger.error("key is null: keyMessage = "+ keyMessage + ex4.getStackTrace(), ex4);
+       logger.error("key is null: keyMessage = "+ keyMessage, ex4);
     }  catch (ClassCastException ex5) {
        logger.error("The object found for the given key is not a string: keyMessage = " +
                keyMessage + ", message = " + message + ex5.getStackTrace(), ex5);
@@ -59,7 +63,8 @@ final Logger logger = LoggerFactory.getLogger(Greeting.class);
 return message;
 }
  private void getLocale () {
-         for (Locale i : supportedLocales) { 
+     
+         for (Locale i : localesList) { 
          if (i.getLanguage().equals(Locale.getDefault().getLanguage())) { 
              locale = i;
              break;
@@ -78,31 +83,6 @@ return message;
      logger.debug("The metod localizeMessage initialized the peremeter baseName=" + baseName);
      return baseName;
      }
-  // for test
-  public String  localizeMessage (String keyMessage, Locale locale) { 
-     baseName = getBaseName(locale);
-   try {
-   bundle = ResourceBundle.getBundle(baseName, locale);
-   } catch (MissingResourceException ex1) 
-   {
-       logger.error("No resource bundle for the specified base name can be found, "
-               + "perhaps you should specify the full path to the file: " + ex1.getStackTrace(), ex1);
-   }catch (NullPointerException ex2) {
-       logger.error("baseName is null: " + ex2.getStackTrace(), ex2);
-   }
-
-   try {
-   message = bundle.getString(keyMessage);
-   } catch (MissingResourceException ex3) 
-   {
-       logger.error("No object for the given key can be found, " + ex3.getStackTrace(), ex3);
-    } catch (NullPointerException ex4) {
-       logger.error("key is null: keyMessage = "+ keyMessage + ex4.getStackTrace(), ex4);
-    }  catch (ClassCastException ex5) {
-       logger.error("The object found for the given key is not a string: keyMessage = " +
-               keyMessage + ", message = " + message + ex5.getStackTrace(), ex5);
-   }
-   logger.info("The metod localizeMessage returned message = " + message);
-return message;
-}
+  
+  
 }

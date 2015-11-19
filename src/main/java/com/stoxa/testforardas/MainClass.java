@@ -5,10 +5,6 @@
  */
 package com.stoxa.testforardas;
 
-import static com.stoxa.testforardas.Greeting.locale;
-import java.util.Locale;
-import java.util.ResourceBundle;
-
 /**
  *
  * @author stoxa
