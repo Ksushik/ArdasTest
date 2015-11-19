@@ -11,8 +11,11 @@ package com.stoxa.testforardas;
  */
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import  java.util.Locale;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 import org.slf4j.Logger;
@@ -27,8 +30,11 @@ final Logger logger = LoggerFactory.getLogger(Greeting.class);
 
     
  private static final int DEFAULT_LOCALE = 0;
- private static final Locale[] supportedLocales = {new Locale("en", "US"), new Locale("ru", "UA") }; 
- private static final List <Locale> localesList = new ArrayList<Locale> (Arrays.asList(supportedLocales));
+ private static final Map <String, Locale> localesList = new HashMap<String, Locale> () {{
+	put("en",  new Locale("en", "US"));
+	put("ru", new Locale("ru", "UA"));
+       }}; 
+ 
  private ResourceBundle bundle; 
  public static Locale locale; 
  String message;
@@ -64,12 +70,12 @@ return message;
 }
  private void getLocale () {
      
-         for (Locale i : localesList) { 
-         if (i.getLanguage().equals(Locale.getDefault().getLanguage())) { 
-             locale = i;
+         for (Entry  <String, Locale> i : localesList.entrySet()) { 
+         if (i.getKey().equals(Locale.getDefault().getLanguage())) { 
+             locale = i.getValue();
              break;
          }  else {
-             locale = supportedLocales[DEFAULT_LOCALE]; 
+             locale = localesList.get("en"); 
              } 
      } logger.debug("The metod localizeMessage initialized the peremeter locale=" + locale);
      }

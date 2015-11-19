@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.stoxa.testforardas.GreetingTypeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.236 sec <<< FAILURE!
-initializationError(com.stoxa.testforardas.GreetingTypeTest)  Time elapsed: 0.039 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.208 sec <<< FAILURE!
+initializationError(com.stoxa.testforardas.GreetingTypeTest)  Time elapsed: 0.022 sec  <<< ERROR!
 java.lang.Exception: Test class should have exactly one public zero-argument constructor
 	at org.junit.runners.BlockJUnit4ClassRunner.validateZeroArgConstructor(BlockJUnit4ClassRunner.java:171)
 	at org.junit.runners.BlockJUnit4ClassRunner.validateConstructor(BlockJUnit4ClassRunner.java:148)

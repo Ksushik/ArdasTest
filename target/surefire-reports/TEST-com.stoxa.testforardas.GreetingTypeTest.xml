@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.stoxa.testforardas.GreetingTypeTest" time="0.235" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="com.stoxa.testforardas.GreetingTypeTest" time="0.207" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/stoxa/jdk1.8.0_60/jre/lib/amd64"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.stoxa.testforardas.GreetingTypeTest" name="initializationError" time="0.039">
+  <testcase classname="com.stoxa.testforardas.GreetingTypeTest" name="initializationError" time="0.023">
     <error message="Test class should have exactly one public zero-argument constructor" type="java.lang.Exception">java.lang.Exception: Test class should have exactly one public zero-argument constructor
 	at org.junit.runners.BlockJUnit4ClassRunner.validateZeroArgConstructor(BlockJUnit4ClassRunner.java:171)
 	at org.junit.runners.BlockJUnit4ClassRunner.validateConstructor(BlockJUnit4ClassRunner.java:148)
