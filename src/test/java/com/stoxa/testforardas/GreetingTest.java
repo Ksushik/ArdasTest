@@ -171,7 +171,7 @@ return message;
     public void test6LocalizeMessage() {
         System.out.println("Test6: Let's test the method localizeMessage for Day");
         String keyMessage = "DayMessage";
-        Greeting instance = new Greeting();
+        GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Добрый день, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
@@ -186,7 +186,7 @@ return message;
     public void test7LocalizeMessage() {
         System.out.println("Test7: Let's test the method localizeMessage for Evening");
         String keyMessage = "EveningMessage";
-        Greeting instance = new Greeting();
+        GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Добрый вечер, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
@@ -201,7 +201,7 @@ return message;
     public void test8LocalizeMessage() {
         System.out.println("Test8: Let's test the method localizeMessage for Night");
         String keyMessage = "NightMessage";
-        Greeting instance = new Greeting();
+        GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Доброй ночи, Мир!";
         String result = instance.localizeMessage(keyMessage,locale);
