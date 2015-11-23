@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.stoxa.testforardas.DayPartSelectorTest" time="0.022" errors="1" skipped="0">
+<testsuite tests="4" failures="0" name="com.stoxa.testforardas.DayPartSelectorTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/home/stoxa/jdk1.8.0_60/jre/lib/amd64"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/stoxa/NetBeansProjects/TestForArdas"/>
+    <property name="user.dir" value="/home/stoxa/NetBeansProjects/ArdasTest/TestForArdas"/>
     <property name="java.runtime.version" value="1.8.0_60-b27"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/home/stoxa/jdk1.8.0_60/jre/lib/endorsed"/>
@@ -59,34 +59,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.stoxa.testforardas.DayPartSelectorTest" name="initializationError" time="0.01">
-    <error message="Test class should have exactly one public zero-argument constructor" type="java.lang.Exception">java.lang.Exception: Test class should have exactly one public zero-argument constructor
-	at org.junit.runners.BlockJUnit4ClassRunner.validateZeroArgConstructor(BlockJUnit4ClassRunner.java:171)
-	at org.junit.runners.BlockJUnit4ClassRunner.validateConstructor(BlockJUnit4ClassRunner.java:148)
-	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:127)
-	at org.junit.runners.ParentRunner.validate(ParentRunner.java:416)
-	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:84)
-	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:65)
-	at org.junit.internal.builders.JUnit4Builder.runnerForClass(JUnit4Builder.java:10)
-	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
-	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
-	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
-	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)
-	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:51)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
-    <system-out>The end of class Greeting testing
-*********************************************************
-</system-out>
-  </testcase>
+  <testcase classname="com.stoxa.testforardas.DayPartSelectorTest" name="test1GetKeyMessage" time="0.005"/>
+  <testcase classname="com.stoxa.testforardas.DayPartSelectorTest" name="test4GetKeyMessage" time="0.001"/>
+  <testcase classname="com.stoxa.testforardas.DayPartSelectorTest" name="test3GetKeyMessage" time="0.002"/>
+  <testcase classname="com.stoxa.testforardas.DayPartSelectorTest" name="test2GetKeyMessage" time="0"/>
 </testsuite>
