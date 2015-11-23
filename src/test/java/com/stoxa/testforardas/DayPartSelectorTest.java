@@ -18,7 +18,7 @@ public class DayPartSelectorTest extends DayPartSelector {
     
     public String getKeyMessage (Calendar c) {
     currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 
-    logger.info("The current Hour Of Day is: " + currentHourOfDay);
+    
     if (currentHourOfDay>6&&currentHourOfDay<=9) {
         return "MorningMessage";
     }

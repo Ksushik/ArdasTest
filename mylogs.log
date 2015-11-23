@@ -34,3 +34,11 @@
 23-11-2015 02:40:51 INFO  DayPartSelector:21 - The current Hour Of Day is: 0
 23-11-2015 02:40:51 INFO  DayPartSelector:21 - The current Hour Of Day is: 20
 23-11-2015 02:40:51 INFO  DayPartSelector:21 - The current Hour Of Day is: 12
+23-11-2015 03:06:36 INFO  DayPartSelector:30 - The current Hour Of Day is: 3
+23-11-2015 03:06:36 DEBUG Greeting:80 - The metod localizeMessage initialized the peremeter locale=en_US
+23-11-2015 03:06:36 DEBUG Greeting:89 - The metod localizeMessage initialized the peremeter baseName=text
+23-11-2015 03:06:36 INFO  Greeting:68 - The metod localizeMessage returned message = Good night, World!
+23-11-2015 03:09:24 INFO  DayPartSelector:30 - The current Hour Of Day is: 3
+23-11-2015 03:09:24 DEBUG Greeting:80 - The metod localizeMessage initialized the peremeter locale=en_US
+23-11-2015 03:09:24 DEBUG Greeting:89 - The metod localizeMessage initialized the peremeter baseName=text
+23-11-2015 03:09:24 INFO  Greeting:68 - The metod localizeMessage returned message = Good night, World!

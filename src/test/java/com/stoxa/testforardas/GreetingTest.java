@@ -65,7 +65,7 @@ public class GreetingTest {
        logger.error("The object found for the given key is not a string: keyMessage = " +
                keyMessage + ", message = " + message , ex5);
    }
-   logger.info("The metod localizeMessage returned message = " + message);
+   
 return message;
 }
     
