@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.stoxa.testforardas;
 
 import java.util.Calendar;
@@ -13,19 +8,30 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  *
- * @author stoxa
+ * @author ksu
  */
 public class DayPartSelectorTest extends DayPartSelector {
    
     
-    public DayPartSelectorTest(Calendar calendarForTest) {
-    c = calendarForTest;   
+    public String getKeyMessage (Calendar c) {
+    currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 
+    logger.info("The current Hour Of Day is: " + currentHourOfDay);
+    if (currentHourOfDay>6&&currentHourOfDay<=9) {
+        return "MorningMessage";
     }
+    if (currentHourOfDay>9&&currentHourOfDay<=19) {
+        return "DayMessage";
+    }
+    if (currentHourOfDay>19&&currentHourOfDay<=23) {
+        return "EveningMessage";
+    }
+    else {
+        return "NightMessage";
+    }
+}
     
     
     @BeforeClass
@@ -55,9 +61,9 @@ public class DayPartSelectorTest extends DayPartSelector {
     public void test1GetKeyMessage() {
         System.out.println("Test1: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 8, 15);
-        DayPartSelectorTest instance = new DayPartSelectorTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "MorningMessage";
-        String result = instance.getKeyMessage();
+        String result = instance.getKeyMessage(c);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test1 passed correctly (morning)");
         } else {
@@ -69,9 +75,9 @@ public class DayPartSelectorTest extends DayPartSelector {
     public void test2GetKeyMessage() {
         System.out.println("Test2: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 12, 15);
-        DayPartSelectorTest instance = new DayPartSelectorTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "DayMessage";
-        String result = instance.getKeyMessage();
+        String result = instance.getKeyMessage(c);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test2 passed correctly (day)");
         } else {
@@ -83,9 +89,9 @@ public class DayPartSelectorTest extends DayPartSelector {
     public void test3GetKeyMessage() {
         System.out.println("Test3: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 20, 15);
-        DayPartSelectorTest instance = new DayPartSelectorTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "EveningMessage";
-        String result = instance.getKeyMessage();
+        String result = instance.getKeyMessage(c);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test3 passed correctly (evening)");
         } else {
@@ -97,9 +103,9 @@ public class DayPartSelectorTest extends DayPartSelector {
     public void test4GetKeyMessage() {
         System.out.println("Test4: Let's test the method determineKeyMessage");
         c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 0, 15);
-        DayPartSelectorTest instance = new DayPartSelectorTest(c);
+        DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "NightMessage";
-        String result = instance.getKeyMessage();
+        String result = instance.getKeyMessage(c);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test4 passed correctly (night)");
         } else {
