@@ -15,23 +15,24 @@ import static org.junit.Assert.*;
  */
 public class DayPartSelectorTest extends DayPartSelector {
    
+    private int currentHourOfDay;
+    private Calendar todaysCalendar;
     
     public String getKeyMessage (Calendar c) {
-    currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 
-    
-    if (currentHourOfDay>6&&currentHourOfDay<=9) {
-        return "MorningMessage";
+        currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 
+        if (currentHourOfDay>6&&currentHourOfDay<=9) {
+            return "MorningMessage";
+        }
+        if (currentHourOfDay>9&&currentHourOfDay<=19) {
+            return "DayMessage";
+        }
+        if (currentHourOfDay>19&&currentHourOfDay<=23) {
+            return "EveningMessage";
+        }
+        else {
+            return "NightMessage";
+        }
     }
-    if (currentHourOfDay>9&&currentHourOfDay<=19) {
-        return "DayMessage";
-    }
-    if (currentHourOfDay>19&&currentHourOfDay<=23) {
-        return "EveningMessage";
-    }
-    else {
-        return "NightMessage";
-    }
-}
     
     
     @BeforeClass
@@ -55,15 +56,15 @@ public class DayPartSelectorTest extends DayPartSelector {
     }
 
     /**
-     * Test of getKeyMessage method, of class DayPartSelector.
+     * Test of getTypeMessage method, of class DayPartSelector.
      */
     @Test
     public void test1GetKeyMessage() {
         System.out.println("Test1: Let's test the method determineKeyMessage");
-        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 8, 15);
+        todaysCalendar=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 8, 15);
         DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "MorningMessage";
-        String result = instance.getKeyMessage(c);
+        String result = instance.getKeyMessage(todaysCalendar);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test1 passed correctly (morning)");
         } else {
@@ -74,10 +75,10 @@ public class DayPartSelectorTest extends DayPartSelector {
     @Test
     public void test2GetKeyMessage() {
         System.out.println("Test2: Let's test the method determineKeyMessage");
-        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 12, 15);
+        todaysCalendar=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 12, 15);
         DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "DayMessage";
-        String result = instance.getKeyMessage(c);
+        String result = instance.getKeyMessage(todaysCalendar);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test2 passed correctly (day)");
         } else {
@@ -88,10 +89,10 @@ public class DayPartSelectorTest extends DayPartSelector {
     @Test
     public void test3GetKeyMessage() {
         System.out.println("Test3: Let's test the method determineKeyMessage");
-        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 20, 15);
+        todaysCalendar=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 20, 15);
         DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "EveningMessage";
-        String result = instance.getKeyMessage(c);
+        String result = instance.getKeyMessage(todaysCalendar);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test3 passed correctly (evening)");
         } else {
@@ -102,10 +103,10 @@ public class DayPartSelectorTest extends DayPartSelector {
     @Test
     public void test4GetKeyMessage() {
         System.out.println("Test4: Let's test the method determineKeyMessage");
-        c=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 0, 15);
+        todaysCalendar=new GregorianCalendar(2015, Calendar.NOVEMBER, 18, 0, 15);
         DayPartSelectorTest instance = new DayPartSelectorTest();
         String expResult = "NightMessage";
-        String result = instance.getKeyMessage(c);
+        String result = instance.getKeyMessage(todaysCalendar);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println ("Test4 passed correctly (night)");
         } else {

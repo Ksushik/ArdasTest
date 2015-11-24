@@ -26,69 +26,80 @@ import org.slf4j.LoggerFactory;
 
 public class Greeting {
     
-final Logger logger = LoggerFactory.getLogger(Greeting.class);
-
-    
- private static final int DEFAULT_LOCALE = 0;
- private static final Map <String, Locale> localesList = new HashMap<String, Locale> () {{
+    final Logger logger;
+    private static final int DEFAULT_LOCALE = 0;
+    private static final Map <String, Locale> LOCALES_LIST = new HashMap<String, Locale> () {{
 	put("en",  new Locale("en", "US"));
 	put("ru", new Locale("ru", "UA"));
-       }}; 
+        }};  
+    private ResourceBundle bundle; 
+    private static Locale locale; 
+    private String message;
+    private String baseName;
  
- private ResourceBundle bundle; 
- public static Locale locale; 
- String message;
- String baseName;
+    Greeting () {
+        logger = LoggerFactory.getLogger(Greeting.class);
+    }
  
- 
- public String  localizeMessage (String keyMessage) { 
-     getLocale();
-     baseName = getBaseName(locale);
-   try {
-   bundle = ResourceBundle.getBundle(baseName, locale);
-   } catch (MissingResourceException ex1) 
-   {
-       logger.error("No resource bundle for the specified base name can be found, "
+    
+    public String getMessage(String keyMessage) {
+        String resultMessage;
+        try {
+            resultMessage = localizeMessage(keyMessage);
+        } catch (MissingResourceException ex1) {
+            logger.error("No resource bundle for the specified base name can be found, "
                + "perhaps you should specify the full path to the file: ", ex1);
-   }catch (NullPointerException ex2) {
-       logger.error("baseName is null: ", ex2);
-   }
+            throw ex1;
+        } catch (NullPointerException ex2) {
+            logger.error("baseName is null: ", ex2);
+            throw ex2;
+        }
+        return resultMessage;
+    }
+ 
+    
+    private String localizeMessage (String keyMessage) {
+        this.bundle = getBundle();
+        try {
+            message = bundle.getString(keyMessage);
+        } catch (MissingResourceException ex3) {
+            logger.error("No object for the given key can be found, ", ex3);
+        } catch (NullPointerException ex4) {
+            logger.error("key is null: keyMessage = "+ keyMessage, ex4);
+        } catch (ClassCastException ex5) {
+            logger.error("The object found for the given key is not a string: keyMessage = " +
+               keyMessage + ", message = " + message, ex5);
+        }
+        logger.info("The metod localizeMessage returned message = " + message);
+        return message;
+    }
 
-   try {
-   message = bundle.getString(keyMessage);
-   } catch (MissingResourceException ex3) 
-   {
-       logger.error("No object for the given key can be found, ", ex3);
-    } catch (NullPointerException ex4) {
-       logger.error("key is null: keyMessage = "+ keyMessage, ex4);
-    }  catch (ClassCastException ex5) {
-       logger.error("The object found for the given key is not a string: keyMessage = " +
-               keyMessage + ", message = " + message + ex5.getStackTrace(), ex5);
-   }
-   logger.info("The metod localizeMessage returned message = " + message);
-return message;
-}
- private void getLocale () {
-     
-         for (Entry  <String, Locale> i : localesList.entrySet()) { 
-         if (i.getKey().equals(Locale.getDefault().getLanguage())) { 
-             locale = i.getValue();
-             break;
-         }  else {
-             locale = localesList.get("en"); 
-             } 
-     } logger.debug("The metod localizeMessage initialized the peremeter locale=" + locale);
-     }
-  private String getBaseName (Locale locale) {
-     if (locale.getLanguage().equalsIgnoreCase("ru")) {
-         baseName = "text_ru";
-     }
-     else {
-         baseName = "text";
-     }
-     logger.debug("The metod localizeMessage initialized the peremeter baseName=" + baseName);
-     return baseName;
-     }
-  
-  
+    
+    private void getLocale () {
+        for (Entry  <String, Locale> i : LOCALES_LIST.entrySet()) { 
+            if (i.getKey().equals(Locale.getDefault().getLanguage())) { 
+                locale = i.getValue();
+                break;
+            } else {
+                locale = LOCALES_LIST.get("en"); 
+                } 
+        } logger.debug("The metod localizeMessage initialized the peremeter locale=" + locale);
+    }
+ 
+    
+    private String getBaseName (Locale locale) {
+        if (locale.getLanguage().equalsIgnoreCase("ru")) {
+            baseName = "text_ru";
+        } else {
+            baseName = "text";
+        } logger.debug("The metod localizeMessage initialized the peremeter baseName=" + baseName);
+        return baseName;
+    } 
+
+    
+    private ResourceBundle getBundle () {
+        getLocale();
+        baseName = getBaseName(locale);
+        return ResourceBundle.getBundle(baseName, locale);
+    }
 }

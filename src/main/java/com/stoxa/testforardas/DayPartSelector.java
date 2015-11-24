@@ -15,31 +15,31 @@ import org.slf4j.LoggerFactory;
  */
 public class DayPartSelector {
     
-final Logger logger = LoggerFactory.getLogger(DayPartSelector.class);
+    private final Logger logger;
+    private final Calendar todaysCalendar;
+    private int currentHourOfDay;
 
-Calendar c;
-int currentHourOfDay;
-DayPartSelector(){
- c = new GregorianCalendar();   
-}
-
-
-
-public String getKeyMessage () {
-    currentHourOfDay = c.get(Calendar.HOUR_OF_DAY); 
-    logger.info("The current Hour Of Day is: " + currentHourOfDay);
-    if (currentHourOfDay>6&&currentHourOfDay<=9) {
-        return "MorningMessage";
+    DayPartSelector(){
+        todaysCalendar = new GregorianCalendar(); 
+        logger = LoggerFactory.getLogger(DayPartSelector.class);
     }
-    if (currentHourOfDay>9&&currentHourOfDay<=19) {
-        return "DayMessage";
-    }
-    if (currentHourOfDay>19&&currentHourOfDay<=23) {
-        return "EveningMessage";
-    }
-    else {
-        return "NightMessage";
-    }
-}
 
+
+
+    public String getTypeMessage () {
+        currentHourOfDay = todaysCalendar.get(Calendar.HOUR_OF_DAY); 
+        logger.info("The current Hour Of Day is: " + currentHourOfDay);
+        if (currentHourOfDay>6&&currentHourOfDay<=9) {
+            return "MorningMessage";
+        }
+        if (currentHourOfDay>9&&currentHourOfDay<=19) {
+            return "DayMessage";
+        }
+        if (currentHourOfDay>19&&currentHourOfDay<=23) {
+            return "EveningMessage";
+        }
+        else {
+            return "NightMessage";
+        }
+    }
 }

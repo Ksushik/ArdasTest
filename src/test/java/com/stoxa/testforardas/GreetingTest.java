@@ -31,43 +31,56 @@ public class GreetingTest {
     public GreetingTest() {
         logger = LoggerFactory.getLogger(Greeting.class);
     }
-    private String getBaseName (Locale locale) {
-     if (locale.getLanguage().equalsIgnoreCase("ru")) {
-         baseName = "text_ru";
-     }
-     else {
-         baseName = "text";
-     }
     
-     return baseName;
-     }
-    // for test
-  public String  localizeMessage (String keyMessage, Locale locale) { 
-     baseName = getBaseName(locale);
-   try {
-   bundle = ResourceBundle.getBundle(baseName, locale);
-   } catch (MissingResourceException ex1) 
-   {
-       logger.error("No resource bundle for the specified base name can be found, "
+    
+    public String getMessage(String keyMessage, Locale locale) {
+        String resultMessage;
+        try {
+            resultMessage = localizeMessage(keyMessage,locale);
+        } catch (MissingResourceException ex1) {
+            logger.error("No resource bundle for the specified base name can be found, "
                + "perhaps you should specify the full path to the file: ", ex1);
-   }catch (NullPointerException ex2) {
-       logger.error("baseName is null: ", ex2);
-   }
-
-   try {
-   message = bundle.getString(keyMessage);
-   } catch (MissingResourceException ex3) 
-   {
-       logger.error("No object for the given key can be found, " + ex3.getStackTrace(), ex3);
-    } catch (NullPointerException ex4) {
-       logger.error("key is null: keyMessage = "+ keyMessage, ex4);
-    }  catch (ClassCastException ex5) {
-       logger.error("The object found for the given key is not a string: keyMessage = " +
-               keyMessage + ", message = " + message , ex5);
-   }
-   
-return message;
-}
+            throw ex1;
+        } catch (NullPointerException ex2) {
+            logger.error("baseName is null: ", ex2);
+            throw ex2;
+        }
+        return resultMessage;
+    } 
+    
+    
+    public String  localizeMessage (String keyMessage, Locale locale) { 
+        this.bundle = getBundle(locale);
+        try {
+            message = bundle.getString(keyMessage);
+        } catch (MissingResourceException ex3) {
+            logger.error("No object for the given key can be found, ", ex3);
+        } catch (NullPointerException ex4) {
+            logger.error("key is null: keyMessage = "+ keyMessage, ex4);
+        } catch (ClassCastException ex5) {
+            logger.error("The object found for the given key is not a string: keyMessage = " +
+               keyMessage + ", message = " + message, ex5);
+        }
+        logger.info("The metod localizeMessage returned message = " + message);
+        return message;
+    }
+    
+    
+    private String getBaseName (Locale locale) {
+        if (locale.getLanguage().equalsIgnoreCase("ru")) {
+            baseName = "text_ru";
+        } else {
+            baseName = "text";
+        }
+        return baseName;
+    } 
+    
+    
+    private ResourceBundle getBundle (Locale locale) {
+        baseName = getBaseName(locale);
+        return ResourceBundle.getBundle(baseName, locale);
+    }
+    
     
     @BeforeClass
     public static void setUpClass() {
@@ -99,7 +112,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("en", "US");
         String expResult = "Good morning, World!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test1 passed correctly");
         } else {
@@ -114,7 +127,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("en", "US");
         String expResult = "Good day, World!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test2 passed correctly");
         } else {
@@ -129,7 +142,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("en", "US");
         String expResult = "Good evening, World!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test3 passed correctly");
         } else {
@@ -144,7 +157,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("en", "US");
         String expResult = "Good night, World!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test4 passed correctly");
         } else {
@@ -159,7 +172,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Доброе утро, Мир!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test5 passed correctly");
         } else {
@@ -174,7 +187,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Добрый день, Мир!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test6 passed correctly");
         } else {
@@ -189,7 +202,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Добрый вечер, Мир!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test7 passed correctly");
         } else {
@@ -204,7 +217,7 @@ return message;
         GreetingTest instance = new GreetingTest();
         Locale locale = new Locale("ru", "UA");
         String expResult = "Доброй ночи, Мир!";
-        String result = instance.localizeMessage(keyMessage,locale);
+        String result = instance.getMessage(keyMessage,locale);
         if (expResult.equalsIgnoreCase(result)){
         System.out.println("Test8 passed correctly");
         } else {

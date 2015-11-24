@@ -13,7 +13,7 @@ public class MainClass {
     public static void main(String[] args) {
         Greeting myGreeting = new Greeting();
         DayPartSelector keyMessage = new DayPartSelector();
-        String key = keyMessage.getKeyMessage();
+        String key = keyMessage.getTypeMessage();
         System.out.println(myGreeting.localizeMessage(key));
 
     }
