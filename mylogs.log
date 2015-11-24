@@ -2,3 +2,17 @@
 23-11-2015 03:12:28 DEBUG Greeting:80 - The metod localizeMessage initialized the peremeter locale=en_US
 23-11-2015 03:12:28 DEBUG Greeting:89 - The metod localizeMessage initialized the peremeter baseName=text
 23-11-2015 03:12:28 INFO  Greeting:68 - The metod localizeMessage returned message = Good night, World!
+24-11-2015 09:34:36 INFO  DayPartSelector:31 - The current Hour Of Day is: 9
+24-11-2015 10:12:53 INFO  Greeting:64 - The metod localizeMessage returned message = Добрый день, Мир!
+24-11-2015 10:12:53 INFO  Greeting:64 - The metod localizeMessage returned message = Доброе утро, Мир!
+24-11-2015 10:12:53 INFO  Greeting:64 - The metod localizeMessage returned message = Good night, World!
+24-11-2015 10:12:53 INFO  Greeting:64 - The metod localizeMessage returned message = Good evening, World!
+24-11-2015 10:12:53 INFO  Greeting:64 - The metod localizeMessage returned message = Good day, World!
+24-11-2015 10:12:54 INFO  Greeting:64 - The metod localizeMessage returned message = Good morning, World!
+24-11-2015 10:12:54 INFO  Greeting:64 - The metod localizeMessage returned message = Доброй ночи, Мир!
+24-11-2015 10:12:54 INFO  Greeting:64 - The metod localizeMessage returned message = Добрый вечер, Мир!
+24-11-2015 10:13:07 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+24-11-2015 10:14:03 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+24-11-2015 10:14:03 DEBUG Greeting:86 - The metod localizeMessage initialized the peremeter locale=en_US
+24-11-2015 10:14:03 DEBUG Greeting:95 - The metod localizeMessage initialized the peremeter baseName=text
+24-11-2015 10:14:03 INFO  Greeting:73 - The metod localizeMessage returned message = Good day, World!

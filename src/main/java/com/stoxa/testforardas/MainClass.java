@@ -14,7 +14,7 @@ public class MainClass {
         Greeting myGreeting = new Greeting();
         DayPartSelector keyMessage = new DayPartSelector();
         String key = keyMessage.getTypeMessage();
-        System.out.println(myGreeting.localizeMessage(key));
+        System.out.println(myGreeting.getMessage(key));
 
     }
 }
