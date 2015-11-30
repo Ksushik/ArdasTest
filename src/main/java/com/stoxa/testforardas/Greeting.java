@@ -9,21 +9,22 @@ package com.stoxa.testforardas;
  *
  * @author ksu
  */
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import  java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+import javax.annotation.PostConstruct;
+import org.apache.avro.specific.AvroGenerated;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 
 
-
+@Component
 public class Greeting {
     
     final Logger logger;
@@ -36,13 +37,21 @@ public class Greeting {
     private static Locale locale; 
     private String message;
     private String baseName;
+    private String keyMessage;
+    @Autowired
+    private DayPartSelector messageType;
  
-    Greeting () {
-        logger = LoggerFactory.getLogger(Greeting.class);
+    @PostConstruct
+    public void init() {
+        
+        this.keyMessage = messageType.getTypeMessage();
     }
- 
     
-    public String getMessage(String keyMessage) {
+    public Greeting (){
+        this.logger = LoggerFactory.getLogger(Greeting.class);
+    }
+
+    public String getMessage() {
         String resultMessage;
         try {
             resultMessage = localizeMessage(keyMessage);

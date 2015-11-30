@@ -26,7 +26,7 @@ public class DayPartSelector {
 
 
 
-    public String getTypeMessage () {
+    protected String getTypeMessage () {
         currentHourOfDay = todaysCalendar.get(Calendar.HOUR_OF_DAY); 
         logger.info("The current Hour Of Day is: " + currentHourOfDay);
         if (currentHourOfDay>6&&currentHourOfDay<=9) {
