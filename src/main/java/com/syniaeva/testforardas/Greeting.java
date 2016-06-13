@@ -3,28 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.stoxa.testforardas;
+package com.syniaeva.testforardas;
 
 /**
  *
- * @author ksu
+ * @author syniaeva
  */
 import java.util.HashMap;
-import  java.util.Locale;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-import javax.annotation.PostConstruct;
-import org.apache.avro.specific.AvroGenerated;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 
 
-@Component
 public class Greeting {
     
     final Logger logger;
@@ -34,21 +29,23 @@ public class Greeting {
 	put("ru", new Locale("ru", "UA"));
         }};  
     private ResourceBundle bundle; 
-    private static Locale locale; 
+    private Locale locale; 
     private String message;
-    private String baseName;
+    private String baseName="";
     private String keyMessage;
-    @Autowired
-    private DayPartSelector messageType;
- 
-    @PostConstruct
-    public void init() {
-        
-        this.keyMessage = messageType.getTypeMessage();
-    }
+    
+   
+    private DayPartSelector messageType =  new DayPartSelector();
     
     public Greeting (){
         this.logger = LoggerFactory.getLogger(Greeting.class);
+        this.keyMessage = messageType.getTypeMessage();
+    }
+    
+    public Greeting (Locale locale){
+        this.logger = LoggerFactory.getLogger(Greeting.class);
+        this.keyMessage = messageType.getTypeMessage();
+        this.locale = locale;
     }
 
     public String getMessage() {
@@ -85,6 +82,9 @@ public class Greeting {
 
     
     private void getLocale () {
+        if (locale!=null) {
+            return;
+        }
         for (Entry  <String, Locale> i : LOCALES_LIST.entrySet()) { 
             if (i.getKey().equals(Locale.getDefault().getLanguage())) { 
                 locale = i.getValue();
@@ -98,9 +98,9 @@ public class Greeting {
     
     private String getBaseName (Locale locale) {
         if (locale.getLanguage().equalsIgnoreCase("ru")) {
-            baseName = "text_ru";
+            baseName = baseName + "text_ru";
         } else {
-            baseName = "text";
+            baseName = baseName + "text";
         } logger.debug("The metod localizeMessage initialized the peremeter baseName=" + baseName);
         return baseName;
     } 

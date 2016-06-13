@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.stoxa.testforardas;
+package com.syniaeva.testforardas;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -11,12 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**
  *
- * @author ksu
+ * @author syniaeva
  */
+
 public class DayPartSelector {
     
     private final Logger logger;
-    private final Calendar todaysCalendar;
+    private Calendar todaysCalendar;
     private int currentHourOfDay;
 
     DayPartSelector(){
@@ -25,8 +26,7 @@ public class DayPartSelector {
     }
 
 
-
-    protected String getTypeMessage () {
+    public String getTypeMessage () {
         currentHourOfDay = todaysCalendar.get(Calendar.HOUR_OF_DAY); 
         logger.info("The current Hour Of Day is: " + currentHourOfDay);
         if (currentHourOfDay>6&&currentHourOfDay<=9) {
