@@ -1,1 +1,1 @@
-https://circleci.com/gh/:owner>/:repo.svg?style=shield&circle-token=:circle-ci-badge-token
+image:https://circleci.com/gh/Ksushik/Greeter/tree/new_version.svg?style=svg["CircleCI", link="https://circleci.com/gh/Ksushik/Greeter/tree/new_version"]
