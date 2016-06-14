@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.syniaeva.testforardas.controller;
+package com.syniaeva.greeter.controller;
 
-import com.syniaeva.testforardas.Greeting;
+import com.syniaeva.greeter.Greeting;
 import java.util.Locale;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

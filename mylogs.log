@@ -9425,3 +9425,230 @@ Content-Type: application/json; charset=utf-8
 13-06-2016 15:31:00 DEBUG ExecuteProduceConsume:248 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@1660310a ran SelectChannelEndPoint@63e839b5{/0:0:0:0:0:0:0:1:51723<->7777,CLOSED,ISHUT,OSHUT,-,-,2440/30000,HttpConnection}{io=0/0,kio=-1,kro=-1}:runFillable
 13-06-2016 15:31:00 DEBUG ExecuteProduceConsume:261 - EPR Prod/org.eclipse.jetty.io.ManagedSelector$SelectorProducer@1660310a produce exit
 13-06-2016 15:31:00 DEBUG QueuedThreadPool:574 - ran org.eclipse.jetty.io.ManagedSelector@3b6d844d id=0 keys=0 selected=0
+13-06-2016 15:31:22 DEBUG session:351 - Scavenging sessions at 1465821082563
+13-06-2016 15:31:52 DEBUG session:351 - Scavenging sessions at 1465821112549
+13-06-2016 15:32:22 DEBUG session:351 - Scavenging sessions at 1465821142549
+13-06-2016 15:32:52 DEBUG session:351 - Scavenging sessions at 1465821172549
+13-06-2016 15:33:22 DEBUG session:351 - Scavenging sessions at 1465821202549
+13-06-2016 15:33:52 DEBUG session:351 - Scavenging sessions at 1465821232549
+13-06-2016 15:34:22 DEBUG session:351 - Scavenging sessions at 1465821262549
+13-06-2016 15:34:52 DEBUG session:351 - Scavenging sessions at 1465821292549
+13-06-2016 15:35:22 DEBUG session:351 - Scavenging sessions at 1465821322549
+13-06-2016 15:35:52 DEBUG session:351 - Scavenging sessions at 1465821352570
+13-06-2016 15:36:22 DEBUG session:351 - Scavenging sessions at 1465821382578
+13-06-2016 15:36:52 DEBUG session:351 - Scavenging sessions at 1465821412583
+13-06-2016 15:37:22 DEBUG session:351 - Scavenging sessions at 1465821442593
+13-06-2016 15:37:52 DEBUG session:351 - Scavenging sessions at 1465821472576
+13-06-2016 15:38:22 DEBUG session:351 - Scavenging sessions at 1465821502577
+13-06-2016 15:38:52 DEBUG session:351 - Scavenging sessions at 1465821532596
+13-06-2016 15:39:22 DEBUG session:351 - Scavenging sessions at 1465821562605
+13-06-2016 15:39:52 DEBUG session:351 - Scavenging sessions at 1465821592612
+13-06-2016 15:40:22 DEBUG session:351 - Scavenging sessions at 1465821622614
+13-06-2016 15:40:52 DEBUG session:351 - Scavenging sessions at 1465821652622
+13-06-2016 15:41:22 DEBUG session:351 - Scavenging sessions at 1465821682628
+13-06-2016 15:41:52 DEBUG session:351 - Scavenging sessions at 1465821712612
+13-06-2016 15:42:22 DEBUG session:351 - Scavenging sessions at 1465821742630
+13-06-2016 15:42:52 DEBUG session:351 - Scavenging sessions at 1465821772635
+13-06-2016 15:43:22 DEBUG session:351 - Scavenging sessions at 1465821802618
+13-06-2016 15:43:52 DEBUG session:351 - Scavenging sessions at 1465821832643
+13-06-2016 15:44:22 DEBUG session:351 - Scavenging sessions at 1465821862651
+13-06-2016 15:44:52 DEBUG session:351 - Scavenging sessions at 1465821892658
+13-06-2016 15:45:22 DEBUG session:351 - Scavenging sessions at 1465821922655
+13-06-2016 15:45:52 DEBUG session:351 - Scavenging sessions at 1465821952675
+13-06-2016 15:46:22 DEBUG session:351 - Scavenging sessions at 1465821982678
+13-06-2016 15:46:52 DEBUG session:351 - Scavenging sessions at 1465822012689
+13-06-2016 15:47:22 DEBUG session:351 - Scavenging sessions at 1465822042697
+13-06-2016 15:47:52 DEBUG session:351 - Scavenging sessions at 1465822072700
+13-06-2016 15:48:22 DEBUG session:351 - Scavenging sessions at 1465822102701
+13-06-2016 15:48:52 DEBUG session:351 - Scavenging sessions at 1465822132704
+13-06-2016 15:49:22 DEBUG session:351 - Scavenging sessions at 1465822162714
+13-06-2016 15:49:52 DEBUG session:351 - Scavenging sessions at 1465822192721
+13-06-2016 15:50:22 DEBUG session:351 - Scavenging sessions at 1465822222729
+13-06-2016 15:50:52 DEBUG session:351 - Scavenging sessions at 1465822252731
+13-06-2016 15:51:22 DEBUG session:351 - Scavenging sessions at 1465822282739
+13-06-2016 15:51:52 DEBUG session:351 - Scavenging sessions at 1465822312748
+13-06-2016 15:52:22 DEBUG session:351 - Scavenging sessions at 1465822342751
+13-06-2016 15:52:52 DEBUG session:351 - Scavenging sessions at 1465822372754
+13-06-2016 15:53:22 DEBUG session:351 - Scavenging sessions at 1465822402747
+13-06-2016 15:53:52 DEBUG session:351 - Scavenging sessions at 1465822432753
+13-06-2016 15:54:22 DEBUG session:351 - Scavenging sessions at 1465822462752
+13-06-2016 15:54:52 DEBUG session:351 - Scavenging sessions at 1465822492755
+13-06-2016 15:55:22 DEBUG session:351 - Scavenging sessions at 1465822522757
+13-06-2016 15:55:52 DEBUG session:351 - Scavenging sessions at 1465822552759
+13-06-2016 15:56:22 DEBUG session:351 - Scavenging sessions at 1465822582761
+13-06-2016 15:56:52 DEBUG session:351 - Scavenging sessions at 1465822612762
+13-06-2016 15:57:22 DEBUG session:351 - Scavenging sessions at 1465822642763
+13-06-2016 15:57:52 DEBUG session:351 - Scavenging sessions at 1465822672765
+13-06-2016 15:58:22 DEBUG session:351 - Scavenging sessions at 1465822702767
+13-06-2016 15:58:52 DEBUG session:351 - Scavenging sessions at 1465822732795
+13-06-2016 15:59:22 DEBUG session:351 - Scavenging sessions at 1465822762805
+13-06-2016 15:59:52 DEBUG session:351 - Scavenging sessions at 1465822792807
+13-06-2016 16:00:22 DEBUG session:351 - Scavenging sessions at 1465822822811
+13-06-2016 16:00:52 DEBUG session:351 - Scavenging sessions at 1465822852796
+13-06-2016 16:01:22 DEBUG session:351 - Scavenging sessions at 1465822882820
+13-06-2016 16:01:52 DEBUG session:351 - Scavenging sessions at 1465822912819
+13-06-2016 16:02:22 DEBUG session:351 - Scavenging sessions at 1465822942821
+13-06-2016 16:02:52 DEBUG session:351 - Scavenging sessions at 1465822972814
+13-06-2016 16:03:22 DEBUG session:351 - Scavenging sessions at 1465823002826
+13-06-2016 16:03:52 DEBUG session:351 - Scavenging sessions at 1465823032827
+13-06-2016 16:04:22 DEBUG session:351 - Scavenging sessions at 1465823062834
+13-06-2016 16:04:52 DEBUG session:351 - Scavenging sessions at 1465823092843
+13-06-2016 16:05:22 DEBUG session:351 - Scavenging sessions at 1465823122846
+13-06-2016 16:05:52 DEBUG session:351 - Scavenging sessions at 1465823152848
+13-06-2016 16:06:22 DEBUG session:351 - Scavenging sessions at 1465823182853
+13-06-2016 16:06:52 DEBUG session:351 - Scavenging sessions at 1465823212857
+13-06-2016 16:07:22 DEBUG session:351 - Scavenging sessions at 1465823242865
+13-06-2016 16:07:52 DEBUG session:351 - Scavenging sessions at 1465823272865
+13-06-2016 16:08:22 DEBUG session:351 - Scavenging sessions at 1465823302868
+13-06-2016 16:08:52 DEBUG session:351 - Scavenging sessions at 1465823332851
+13-06-2016 16:09:22 DEBUG session:351 - Scavenging sessions at 1465823362876
+13-06-2016 16:09:52 DEBUG session:351 - Scavenging sessions at 1465823392884
+13-06-2016 16:10:22 DEBUG session:351 - Scavenging sessions at 1465823422890
+13-06-2016 16:10:52 DEBUG session:351 - Scavenging sessions at 1465823452892
+13-06-2016 16:11:22 DEBUG session:351 - Scavenging sessions at 1465823482896
+13-06-2016 16:11:52 DEBUG session:351 - Scavenging sessions at 1465823512901
+13-06-2016 16:12:22 DEBUG session:351 - Scavenging sessions at 1465823542905
+13-06-2016 16:12:52 DEBUG session:351 - Scavenging sessions at 1465823572914
+13-06-2016 16:13:22 DEBUG session:351 - Scavenging sessions at 1465823602919
+13-06-2016 16:13:52 DEBUG session:351 - Scavenging sessions at 1465823632923
+13-06-2016 16:14:22 DEBUG session:351 - Scavenging sessions at 1465823662931
+13-06-2016 17:14:51 DEBUG session:351 - Scavenging sessions at 1465827280316
+13-06-2016 17:15:47 DEBUG session:351 - Scavenging sessions at 1465827347963
+13-06-2016 17:16:20 DEBUG session:351 - Scavenging sessions at 1465827380255
+13-06-2016 17:16:50 DEBUG session:351 - Scavenging sessions at 1465827410262
+13-06-2016 17:17:20 DEBUG session:351 - Scavenging sessions at 1465827440273
+13-06-2016 17:17:50 DEBUG session:351 - Scavenging sessions at 1465827470285
+13-06-2016 17:18:20 DEBUG session:351 - Scavenging sessions at 1465827500297
+13-06-2016 17:18:50 DEBUG session:351 - Scavenging sessions at 1465827530436
+13-06-2016 17:19:20 DEBUG session:351 - Scavenging sessions at 1465827560447
+13-06-2016 17:19:50 DEBUG session:351 - Scavenging sessions at 1465827590459
+13-06-2016 17:20:20 DEBUG session:351 - Scavenging sessions at 1465827620599
+13-06-2016 17:20:50 DEBUG session:351 - Scavenging sessions at 1465827650613
+13-06-2016 17:21:20 DEBUG session:351 - Scavenging sessions at 1465827680635
+13-06-2016 17:21:50 DEBUG session:351 - Scavenging sessions at 1465827710651
+13-06-2016 17:22:20 DEBUG session:351 - Scavenging sessions at 1465827740638
+13-06-2016 17:22:50 DEBUG session:351 - Scavenging sessions at 1465827770664
+13-06-2016 17:23:20 DEBUG session:351 - Scavenging sessions at 1465827800675
+13-06-2016 17:23:50 DEBUG session:351 - Scavenging sessions at 1465827830682
+13-06-2016 17:24:20 DEBUG session:351 - Scavenging sessions at 1465827860692
+13-06-2016 17:24:50 DEBUG session:351 - Scavenging sessions at 1465827890712
+14-06-2016 10:51:21 DEBUG DayPartSelector:50 - Test1: Let's test the method determineKeyMessage
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 8
+14-06-2016 10:51:21 DEBUG DayPartSelector:60 - Test1 passed correctly (morning)
+14-06-2016 10:51:21 DEBUG DayPartSelector:42 - --------------------------------------------
+14-06-2016 10:51:21 DEBUG DayPartSelector:104 - Test4: Let's test the method determineKeyMessage
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 0
+14-06-2016 10:51:21 DEBUG DayPartSelector:114 - Test4 passed correctly (night)
+14-06-2016 10:51:21 DEBUG DayPartSelector:42 - --------------------------------------------
+14-06-2016 10:51:21 DEBUG DayPartSelector:86 - Test3: Let's test the method determineKeyMessage
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 20
+14-06-2016 10:51:21 DEBUG DayPartSelector:96 - Test3 passed correctly (evening)
+14-06-2016 10:51:21 DEBUG DayPartSelector:42 - --------------------------------------------
+14-06-2016 10:51:21 DEBUG DayPartSelector:68 - Test2: Let's test the method determineKeyMessage
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 12
+14-06-2016 10:51:21 DEBUG DayPartSelector:78 - Test2 passed correctly (day)
+14-06-2016 10:51:21 DEBUG DayPartSelector:42 - --------------------------------------------
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Добрый день, Мир!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Доброе утро, Мир!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Good night, World!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Good evening, World!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Good day, World!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Good morning, World!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Доброй ночи, Мир!
+14-06-2016 10:51:21 INFO  DayPartSelector:31 - The current Hour Of Day is: 10
+14-06-2016 10:51:21 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 10:51:21 INFO  Greeting:79 - The metod localizeMessage returned message = Добрый вечер, Мир!
+14-06-2016 11:22:56 DEBUG DayPartSelector:51 - Test1: Let's test the method determineKeyMessage
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 8
+14-06-2016 11:22:56 DEBUG DayPartSelector:61 - Test1 passed correctly (morning)
+14-06-2016 11:22:56 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:22:56 DEBUG DayPartSelector:105 - Test4: Let's test the method determineKeyMessage
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 0
+14-06-2016 11:22:56 DEBUG DayPartSelector:115 - Test4 passed correctly (night)
+14-06-2016 11:22:56 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:22:56 DEBUG DayPartSelector:87 - Test3: Let's test the method determineKeyMessage
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 20
+14-06-2016 11:22:56 DEBUG DayPartSelector:97 - Test3 passed correctly (evening)
+14-06-2016 11:22:56 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:22:56 DEBUG DayPartSelector:69 - Test2: Let's test the method determineKeyMessage
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 12
+14-06-2016 11:22:56 DEBUG DayPartSelector:79 - Test2 passed correctly (day)
+14-06-2016 11:22:56 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Добрый день, Мир!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Доброе утро, Мир!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Good night, World!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Good evening, World!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Good day, World!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Good morning, World!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Доброй ночи, Мир!
+14-06-2016 11:22:56 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:22:56 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:22:56 INFO  Greeting:79 - The metod localizeMessage returned message = Добрый вечер, Мир!
+14-06-2016 11:35:27 DEBUG DayPartSelector:51 - Test1: Let's test the method determineKeyMessage
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 8
+14-06-2016 11:35:27 DEBUG DayPartSelector:61 - Test1 passed correctly (morning)
+14-06-2016 11:35:27 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:35:27 DEBUG DayPartSelector:105 - Test4: Let's test the method determineKeyMessage
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 0
+14-06-2016 11:35:27 DEBUG DayPartSelector:115 - Test4 passed correctly (night)
+14-06-2016 11:35:27 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:35:27 DEBUG DayPartSelector:87 - Test3: Let's test the method determineKeyMessage
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 20
+14-06-2016 11:35:27 DEBUG DayPartSelector:97 - Test3 passed correctly (evening)
+14-06-2016 11:35:27 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:35:27 DEBUG DayPartSelector:69 - Test2: Let's test the method determineKeyMessage
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 12
+14-06-2016 11:35:27 DEBUG DayPartSelector:79 - Test2 passed correctly (day)
+14-06-2016 11:35:27 DEBUG DayPartSelector:43 - --------------------------------------------
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Добрый день, Мир!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Доброе утро, Мир!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Good night, World!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Good evening, World!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Good day, World!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Good morning, World!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Доброй ночи, Мир!
+14-06-2016 11:35:27 INFO  DayPartSelector:31 - The current Hour Of Day is: 11
+14-06-2016 11:35:27 DEBUG Greeting:104 - The metod localizeMessage initialized the peremeter baseName=text_ru
+14-06-2016 11:35:27 INFO  Greeting:79 - The metod localizeMessage returned message = Добрый вечер, Мир!

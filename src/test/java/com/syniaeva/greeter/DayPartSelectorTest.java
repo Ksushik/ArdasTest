@@ -1,5 +1,6 @@
-package com.syniaeva.testforardas;
+package com.syniaeva.greeter;
 
+import com.syniaeva.greeter.DayPartSelector;
 import java.lang.reflect.Field;
 import java.util.Calendar;
 import java.util.GregorianCalendar;

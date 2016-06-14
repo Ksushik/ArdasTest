@@ -1,0 +1,29 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    Ukraine/Dnipro # Set the timezone
+
+  # Version of java to use
+  java:
+    version: openjdk8
+
+  # Override /etc/hosts
+  hosts:
+    circlehost: 127.0.0.1
+    dev.mycompany.com: 127.0.0.1
+
+
+## Customize checkout
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init # use submodules
+
+
+## Customize test commands
+test:
+  override:
+    - junit test/unit-tests # use junit for testing
+
+

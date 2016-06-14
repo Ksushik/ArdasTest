@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.syniaeva.testforardas;
+package com.syniaeva.greeter;
 
-import com.syniaeva.testforardas.Greeting;
+import com.syniaeva.greeter.Greeting;
 import java.lang.reflect.Field;
 import java.util.Locale;
 import java.util.MissingResourceException;

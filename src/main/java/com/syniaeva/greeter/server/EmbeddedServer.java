@@ -1,7 +1,7 @@
-package com.syniaeva.testforardas.server;
+package com.syniaeva.greeter.server;
 
 
-import com.syniaeva.testforardas.controller.GreetingController;
+import com.syniaeva.greeter.controller.GreetingController;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
